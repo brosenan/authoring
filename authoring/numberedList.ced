@@ -1,0 +1,13 @@
+'/bootstrap':signature(numberedList(Statements)::'/bootstrap':statement,[Statements::'/bootstrap':list('/bootstrap':statement)]).
+'/bootstrap':projection(numberedList(Statements)::'/bootstrap':statement,'/bootstrap':horiz(['/bootstrap':label(!' '),cpi:vis(Statements::'/bootstrap':list('/bootstrap':statement),numberedListMode(9352))])).
+numberedList([_,_,_]).
+'/bootstrap':signature(numberedListMode(Char)::'/bootstrap':mode,[Char::'/bootstrap':number]).
+'/bootstrap':projection([]::'/bootstrap':list(T),numberedListMode(Char),'/bootstrap':horiz([])).
+annotation:shrink(('/bootstrap':userVisualization([First|Rest]::'/bootstrap':list(T),numberedListMode(Char),_,'/bootstrap':vert(['/bootstrap':horiz(['/bootstrap':symbol(Char),'/bootstrap':vis(First::T)]),cpi:vis(Rest::'/bootstrap':list(T),numberedListMode(CharPrime))])):-builtin:succ(Char,CharPrime))).
+'/bootstrap':signature(first(N)::'/bootstrap':mode,[N::'/bootstrap':number]).
+'/bootstrap':signature(notFirst(N)::'/bootstrap':mode,[N::'/bootstrap':number]).
+'/bootstrap':projection([First|Rest]::'/bootstrap':list(T),'/bootstrap':shrink,'/bootstrap':vert(['/bootstrap':horiz(['/bootstrap':vis(First::T),cpi:vis(Rest::'/bootstrap':list(T),first(1))]),'/bootstrap':horiz(['/bootstrap':label(!'    '),cpi:vis(Rest::'/bootstrap':list(T),notFirst(1))])])).
+annotation:shrink(('/bootstrap':userVisualization([First|Rest]::'/bootstrap':list(T),first(N),_,Proj):-builtin:ground(N::'/bootstrap':number),builtin:if(builtin:greaterThen(N,0), (builtin:succ(N1,N),Proj::'/bootstrap':visualization='/bootstrap':horiz(['/bootstrap':vis(First::T),cpi:vis(Rest::'/bootstrap':list(T),first(N1))])::'/bootstrap':visualization),Proj::'/bootstrap':visualization='/bootstrap':horiz([])::'/bootstrap':visualization))).
+'/bootstrap':projection([]::'/bootstrap':list(T),first(N),'/bootstrap':horiz([])).
+'/bootstrap':sandbox(annotation:changeMode([1,2,3,4],'/bootstrap':shrink)::'/bootstrap':list('/bootstrap':number)).
+annotation:shrink(('/bootstrap':userVisualization([First|Rest]::'/bootstrap':list(T),notFirst(N),_,Proj):-builtin:ground(N::'/bootstrap':number),builtin:if(builtin:greaterThen(N,0), (builtin:succ(N1,N),Proj::'/bootstrap':visualization=cpi:vis(Rest::'/bootstrap':list(T),notFirst(N1))::'/bootstrap':visualization),Proj::'/bootstrap':visualization='/bootstrap':horiz(['/bootstrap':vis(First::T),cpi:vis(Rest::'/bootstrap':list(T),first(9999))])::'/bootstrap':visualization))).
